@@ -10,34 +10,42 @@ public class Word {
     //State
     private String englishTrans, miwokTrans;
     private int imageResourceId = NULL;
+    private int soundResourceId;
 
-    public Word(String inputEnglishTrans, String inputMiwokTrans){
+    public Word(String inputEnglishTrans, String inputMiwokTrans, int inputSoundResourceId) {
         englishTrans = inputEnglishTrans;
         miwokTrans = inputMiwokTrans;
+        soundResourceId = inputSoundResourceId;
     }
 
-    public Word(String inputEnglishTrans, String inputMiwokTrans, int inputImageResourceId){
+    public Word(String inputEnglishTrans, String inputMiwokTrans, int inputImageResourceId, int inputSoundResourceId) {
         englishTrans = inputEnglishTrans;
         miwokTrans = inputMiwokTrans;
+        soundResourceId = inputSoundResourceId;
         imageResourceId = inputImageResourceId;
     }
 
     //Behavior
-    public String getEnglishTrans(){
+    public String getEnglishTrans() {
         return englishTrans;
     }
 
-    public String getMiwokTrans(){
+    public String getMiwokTrans() {
         return miwokTrans;
     }
 
-    public int getimageResourceId() { return imageResourceId; }
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
+
+    public int getSoundResourceId() {
+        return soundResourceId;
+    }
 
     public boolean isThereImage() {
-        if(imageResourceId != NULL){
+        if (imageResourceId != NULL) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
