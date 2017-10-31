@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.miwok.Adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.android.miwok.R;
+import com.example.android.miwok.Word;
 
 import java.util.ArrayList;
 

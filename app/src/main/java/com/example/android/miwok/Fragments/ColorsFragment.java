@@ -14,7 +14,7 @@ import android.widget.ListView;
 
 import com.example.android.miwok.R;
 import com.example.android.miwok.Word;
-import com.example.android.miwok.WordAdapter;
+import com.example.android.miwok.Adapters.WordAdapter;
 
 import java.util.ArrayList;
 
