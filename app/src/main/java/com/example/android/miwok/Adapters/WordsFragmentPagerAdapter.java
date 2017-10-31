@@ -15,6 +15,8 @@ import com.example.android.miwok.Fragments.PhrasesFragment;
 
 public class WordsFragmentPagerAdapter extends FragmentPagerAdapter{
 
+    private String tabTitles[] = new String[]{"Numbers", "Family", "Colors", "Phrases"};
+
     public WordsFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -22,6 +24,7 @@ public class WordsFragmentPagerAdapter extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
+            getPageTitle(position);
             return new NumbersFragment();
         } else if (position == 1){
             return new FamilyFragment();
@@ -35,5 +38,10 @@ public class WordsFragmentPagerAdapter extends FragmentPagerAdapter{
     @Override
     public int getCount() {
         return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
     }
 }
